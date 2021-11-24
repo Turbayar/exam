@@ -21,7 +21,16 @@ for (let i = 60; i >= 30; i--) {
 // #+#####
 // +######
 // -- Энд кодоо бичнэ үү!!
-
+for (let i = 0, k = 6; i < 7; k--, i++) {
+    for (let j = 0; j < 7;  j++) {
+      if (j != k) {
+        console.log("#");
+      } else {
+          console.log("+");
+      }
+    }
+    console.log("\n");
+  }
 
 // 4. Регистрийн дугаар өгөхөд төрсөн он, сар, өдөр (YYYY-MM-DD) хүйсийг хэвлэдэг convertRegNum функц бич.
 //      РД - гийн сүүлийн орон сондгой бол эрэгтэй, тэгш бол эмэгтэй байна.
@@ -29,20 +38,33 @@ for (let i = 60; i >= 30; i--) {
 //      convertRegNum('АБ90020321')
 //      >> 1990-02-03 онд төрсөн эрэгтэй
 // -- Энд кодоо бичнэ үү!!
-function convertRegNum() {
-
-}
-convertRegNum('АБ')
-
+// function convertRegNum(a) {
+//     if( string[2]  ){
+// }
+// convertRegNum('АБ90020321');
+// }
 
 // 5. Бүх .red-boxes гэсэн класстай элемэнтийг улаан болго;
 // -- Энд кодоо бичнэ үү!!
 
+var elements = document.getElementsByClassName('red-boxes');
+for(let i = 0; i < elements.length; i++){
+    elements[i].style.color = "red";
+}
+
+
 // 6. blue-box гэсэн ID-тай элемэнтийг цэнхэр болго;
 // -- Энд кодоо бичнэ үү!!
+document.querySelector('#blue-box').style.color = 'blue';
+
 
 // 7. Бүх div - ийг бор болго;
 // -- Энд кодоо бичнэ үү!!
+var div = document.getElementsByTagName('div');
+for(let i = 0; i < div.length; i++){
+    div[i].style.color = "brown";
+}
+
 
 // 8. Шинээр box гэсэн класстай section tag үүсгээд, хар өнгөтэй болгоно.
 //    Дотор нь box гэсэн класстай article tag үүсгэнэ.
@@ -50,3 +72,6 @@ convertRegNum('АБ')
 //    section tag - ыг body руу append хийнэ.
 //    улаан бөөрөнхий дээр дарахад бөөрөнхийг ногоон болгоно.
 // -- Энд кодоо бичнэ үү!!
+
+const sec = document.createElement("section");
+sec.classList.add('box');
